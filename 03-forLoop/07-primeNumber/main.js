@@ -1,13 +1,13 @@
-for (i=0;i<=100;i++)
-{
-    for(j=0;j<=i;j++)
-    {
-        if (j / i  == 0)
+for (let n = 2; n <= 100; n++) {
+    let isPrime = true;//วิธีการที่เรียกว่า flag
+    for (let divider = 2; divider < n; divider++) {
+        if (n % divider ==0) 
         {
-            console.log(j)
+            isPrime = false;
+            break;
+            //^ ให้หยุดการทำงานเมื่อเจอเงื่อนไข
         }
-    }
-
     
-    
+    if (isPrime) console.log(n);
+}
 }
